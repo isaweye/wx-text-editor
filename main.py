@@ -1,6 +1,7 @@
 import wx
 import wx.stc as stc
 import os
+import sys
 
 STYLES = {
     "default": "fore:#000000,back:#FFFFFF,face:Courier New,size:10"
@@ -22,6 +23,12 @@ class SimpleTextEditor(wx.Frame):
 
         self.text_ctrl.Bind(wx.EVT_KEY_DOWN, self.on_key_down)
         self.text_ctrl.Bind(wx.stc.EVT_STC_CHANGE, self.on_text_change)
+        
+        try:
+            if not sys.argv[1] == None:
+                self.open_arg(sys.argv[1])
+        except:
+            pass
 
     def create_menu_bar(self):
         menu_bar = wx.MenuBar()
@@ -104,6 +111,15 @@ class SimpleTextEditor(wx.Frame):
 
         self.text_ctrl.SetValue(content)
         self.current_file_path = file_path
+        self.file_modified = False  # Reset file_modified after opening a file
+        self.update_window_title()
+        
+    def open_arg(self, path):
+        with open(path, "r") as file:
+            content = file.read()
+
+        self.text_ctrl.SetValue(content)
+        self.current_file_path = path
         self.file_modified = False  # Reset file_modified after opening a file
         self.update_window_title()
 
