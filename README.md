@@ -3,9 +3,12 @@
 ```shell
   $ python -m pip install wxPython
 ```
-![зображення](https://github.com/isaweye/wx-text-editor/assets/130868496/6eba700b-9870-4f1a-b3d1-a343834ce945)
+![зображення](https://github.com/isaweye/wx-text-editor/assets/130868496/538582e9-93c1-486d-8e46-e08d0de6687f)
 
-![зображення](https://github.com/isaweye/wx-text-editor/assets/130868496/a6580961-8dce-49af-98e5-8b70a5d13699)
+![зображення](https://github.com/isaweye/wx-text-editor/assets/130868496/6d0995a3-b8b1-4f3a-a60a-c9012cd170ed)
+
+![зображення](https://github.com/isaweye/wx-text-editor/assets/130868496/11b596a0-15c9-411c-ab14-524911a469ec)
+
 
 
 
