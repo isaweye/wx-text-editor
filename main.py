@@ -416,13 +416,13 @@ class SimpleTextEditor(wx.Frame):
         keycode = event.GetKeyCode()
         if event.ControlDown() and keycode == ord('S'):  # Save shortcut, you can change this
             self.on_save(event)
-        elif event.ControlDown() and keycode == ord('F'):
+        elif event.ControlDown() and keycode == ord('F'): # and this (meni poxyi, mit license)
             self.on_find(event)
         else:
             event.Skip()
     def on_about(self, event):
         dlg = wx.MessageDialog(self,
-                               "wxTextEditor\nAuthor: mqchinee (a.k.a. isaweye)\n\nSource code: https://github.com/isaweye/wx-text-editor",
+                               "wxTextEditor\nVersion: 1.1\nAuthor: mqchinee (a.k.a. isaweye)\n\nSource code: https://github.com/isaweye/wx-text-editor",
                                "About", wx.OK)
         dlg.ShowModal()
         dlg.Destroy()
